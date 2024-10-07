@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get('/about', (req, res) => {
-  res.json({ message: 'This is the About page.' });
+router.get('/about', (req, res, next) => {
+  res.render('about', { title: 'About' });
 });
-module.exports = router;
+module.exports = router;
